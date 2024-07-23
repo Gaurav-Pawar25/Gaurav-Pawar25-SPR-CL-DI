@@ -29,13 +29,20 @@ public class ArithmeticPresentationLayer {
     private Adder adder;
     private Multiplier multiplier;
     private Squarer squarer;
-
+    
+    @Autowired
     public void setMultiplier(Multiplier multiplier) {
         this.multiplier = multiplier;
     }
-
+     
+    @Autowired
     public ArithmeticPresentationLayer(Squarer squarer) {
         this.squarer = squarer;
+    }
+
+    @Autowired
+    private void setAdder(Adder adder){
+        this.adder = adder;
     }
 
     public static void main(String[] args) {
